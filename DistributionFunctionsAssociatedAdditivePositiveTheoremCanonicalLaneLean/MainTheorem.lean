@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean.DistributionFunctions
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean.AdditivePositiveDecomposition
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean.ConvolutionStability
+import HautevilleHouse.DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean.FourierTransformBridge
+
+namespace HautevilleHouse
+namespace DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean
+
+def AdditivePositiveClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem additive_positive_endgame (A : AdmissibleClass) : AdditivePositiveClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DistributionFunctionsAssociatedAdditivePositiveTheoremCanonicalLaneLean
+end HautevilleHouse
